@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    answer_text = models.TextField()
+    category = models.CharField(max_length=20, default='General') 
+    def __str__(self):
+        return self.question_text
