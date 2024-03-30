@@ -1,6 +1,8 @@
 
 {% extends "users/layout.html" %}
 {% block body %}
-    <h1>Welcome to Arts & Crafts {{ request.user.username }}!</h1>
-    <button onclick="window.location.href='/eduprod/'">PRESS TO START THE QUIZ</button>
+<!--  Displays user's username as part of the message  -->
+   <h1>Welcome to Arts & Crafts {{ request.user.username }}!</h1>
+<!--  Displays a button to the edprod quiz for user to click  -->
+   <button onclick="window.location.href='/eduprod/'">PRESS TO START THE QUIZ</button>
 {% endblock %}
