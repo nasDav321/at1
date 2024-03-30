@@ -1,5 +1,6 @@
 {% extends "users/layout.html" %}
 {% block body %}
+<!-- Displays a username and password input box for user to enter credentials  -->
 <form action="{% url 'users:login' %}" method="post">
     {% csrf_token %}
     <input type="text" name="username" placeholder="Username">
