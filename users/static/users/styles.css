@@ -38,9 +38,10 @@ p {
     justify-content: space-between;
     padding: 10px;
 }
-.logo img {
-    height: auto; /* Keep image aspect ratio */
-    width: auto; /* You can set a max-width here if needed */
+
+.logo_v2 img {
+    height: 100px; /* Keep image aspect ratio */
+    max-width: 100px; /* You can set a max-width here if needed */
 }
 .user-info {
     display: flex;
