@@ -2,7 +2,7 @@
 {% extends "users/layout.html" %}
 {% block body %}
 <!--  Displays user's username as part of the message  -->
-   <h1>Welcome to Arts & Crafts {{ request.user.username }}!</h1>
+   <h1 style="font-family: 'KG Shake it Off', cursive;">Welcome to Arts & Crafts {{ request.user.username }}!</h1>
 <!--  Displays a button to the eduprod quiz for user to click  -->
    <button onclick="window.location.href='/eduprod/'">PRESS TO START THE QUIZ</button>
 {% endblock %}

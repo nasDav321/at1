@@ -39,8 +39,11 @@ p {
     padding: 10px;
 }
 
+.Logo_v2{
+
+}
 
 .user-info {
     display: flex;
-    align-items: center;
+    align-items: right;
 }
