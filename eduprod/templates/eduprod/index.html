@@ -1,6 +1,12 @@
 
 {% extends "eduprod/layout.html" %}
 {% block body %}
+<!-- Retrieves & displays questions -->
 <div id="content" data-questions='{{ questions_json|safe }}'></div>
-<button id="revealBtn">Reveal Answer</button> 
+<!-- Adds an input box for user -->
+<div id="content">
+    <div class="question"></div>
+    <img src="https://static.wikia.nocookie.net/colors/images/8/84/1200px-Orange_colour_box.svg.png/revision/latest?cb=20231102222423" alt="Color Orange" id="OrangeImage" style="display: none;">
+    <input type="text" id="userAnswer" placeholder="Type your answer here">
+</div>
 {% endblock %}
