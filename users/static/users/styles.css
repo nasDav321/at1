@@ -39,10 +39,7 @@ p {
     padding: 10px;
 }
 
-.logo_v2 img {
-    height: 100px; /* Keep image aspect ratio */
-    max-width: 100px; /* You can set a max-width here if needed */
-}
+
 .user-info {
     display: flex;
     align-items: center;
