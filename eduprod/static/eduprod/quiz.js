@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function() {
     let currentQuestionIndex = 0;
     const questions = JSON.parse(document.getElementById('content').getAttribute('data-questions'));
-    const content = document.getElementsByClassName('content');
-    const OrangeImage = document.getElementsByClassName('OrangeImage');
+    const content = document.getElementById('content');
+    const OrangeImage = document.getElementById('OrangeImage');
+    const nextQuestionBtn = document.getElementById('nextQuestionBtn'); // Get the button by its ID
 
+    
     function displayQuestion() {
         if (currentQuestionIndex < questions.length) {
             const question = questions[currentQuestionIndex].fields.question_text;
@@ -18,17 +20,19 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 OrangeImage.style.display = "none";
             }
+            
         } else {
             content.innerHTML = "No more questions.";
-        
+       
         }
     }
 
     displayQuestion();
 
-    document.addEventListener("click", function() {
-            currentQuestionIndex++;
-            displayQuestion();
+    // Add event listener to the "Next Question" button
+    nextQuestionBtn.addEventListener("click", function() {
+        currentQuestionIndex++;
+        displayQuestion();
     
-        });
+    });
 });

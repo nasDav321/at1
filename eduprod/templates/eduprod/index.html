@@ -2,6 +2,8 @@
 {% extends "eduprod/layout.html" %}
 {% load static %}
 {% block body %}
+
+
 <!-- Retrieves & displays questions -->
 <div id="content" data-questions='{{ questions_json|safe }}'></div>
 
@@ -12,6 +14,9 @@
 <input type="text" id="userAnswer" placeholder="Type your answer here">
 
 </div>
-    
+
+<div>
+<button id="nextQuestionBtn">Next Question</button>
+</div>
 
 {% endblock %}
