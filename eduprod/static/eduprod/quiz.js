@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function() {
             // Display question and answer
             content.innerHTML = `<div class='question'>Question: ${question}</div><div class='answer' style='display: none;'>Answer: ${answer}</div>`;
 
-            // Show/hide Orange.png based on the question
-            if (question.toLowerCase().includes("color") && question.toLowerCase().includes("this")) {
-                OrangeImage.style.display = "block";
-            } else {
-                OrangeImage.style.display = "none";
-            }
+             // Show/hide Orange.png based on the question
+        if (question.toLowerCase().includes("what color is this?")) {
+            OrangeImage.style.display = "block"; // Show the image for the specific question
+        } else {
+            OrangeImage.style.display = "none"; // Hide the image for other questions
+        }
             
         } else {
             content.innerHTML = "No more questions.";
