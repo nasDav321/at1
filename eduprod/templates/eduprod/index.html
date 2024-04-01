@@ -7,16 +7,37 @@
 <!-- Retrieves & displays questions -->
 <div id="content" data-questions='{{ questions_json|safe }}'></div>
 
-<!-- Adds an input box for user -->
+<!-- The randomised Q's with images -->
 
 <div class="question"></div>
       <img src="{% static 'eduprod/Orange.png' %}" alt="Color Orange" id="OrangeImage" style="display: block;" height="120px"> 
-<input type="text" id="userAnswer" placeholder="Type your answer here">
 
 </div>
 
+<div class="question"></div>
+      <img src="{% static 'eduprod/Purple.png' %}" alt="Color Purple" id="PurpleImage" style="display: block;" height="120px"> 
+
+</div>
+
+<div class="question"></div>
+      <img src="{% static 'eduprod/Yellow.png' %}" alt="Color Yellow" id="YellowImage" style="display: block;" height="120px"> 
+
+</div>
+
+<div class="question"></div>
+      <img src="{% static 'eduprod/Pencil.png' %}" alt="Color Pink" id="PencilImage" style="display: block;" height="120px"> 
+
+</div>
+
+<!-- Adds an input box for user -->
+<div> 
+      <input type="text" id="userAnswer" placeholder="Type your answer here">
+
+</div>
+
+<!-- Adds an "Next Question" button -->
 <div>
-<button id="nextQuestionBtn">Next Question</button>
-</div>
+      <button id="nextQuestionBtn">Next Question</button>
+      </div>
 
 {% endblock %}
