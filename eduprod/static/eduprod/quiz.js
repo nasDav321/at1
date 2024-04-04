@@ -8,7 +8,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const PencilImage = document.getElementById('PencilImage');
     const nextQuestionBtn = document.getElementById('nextQuestionBtn'); // Get the button by its ID
     const userAnswer = document.getElementById('userAnswer');
-    
+    const quizResultsBtn = document.getElementById('quizResultsBtn');
+   
     function displayQuestion() {
         if (currentQuestionIndex < questions.length) {
             const question = questions[currentQuestionIndex].fields.question_text;
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
             PurpleImage.style.display = "none"; // Hide Purple image by default
             YellowImage.style.display = "none"; // Hide Yellow image by default
             PencilImage.style.display = "none"; // Hide Pencil Image by defualt
+            
 
             // Show/hide Orange/Purple images based on the question
             if (question.toLowerCase().includes("what color is this?")) {
@@ -44,7 +46,16 @@ document.addEventListener("DOMContentLoaded", function() {
             PencilImage.style.display = "none"; 
             nextQuestionBtn.style.display = "none";
             userAnswer.style.display = "none";
+            quizResultsBtn.style.display = "block";
         }
+    } 
+
+    function clearInput() {
+        // Get the input element by its ID
+        var userAnswer = document.getElementById("userAnswer");
+    
+        // Reset the input field value to an empty string
+        userAnswer.value = "";
     }
 
     displayQuestion();
@@ -52,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Add event listener to the "Next Question" button
     nextQuestionBtn.addEventListener("click", function() {
         currentQuestionIndex++;
+        clearInput();
         displayQuestion();
     
     });
-});
+}); 
