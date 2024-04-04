@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Get the input element by its ID
         var userAnswer = document.getElementById("userAnswer");
     
-        // Reset the input field value to an empty string
+        // Reset the input field value to an empty string. Note - This ended up not working
         userAnswer.value = "";
     }
 
